@@ -6,8 +6,8 @@
     <title>Marina Takara</title>
     <style>
       .sec-HomepageHero {
-        width: 70%;
-        height: 70%;
+        width: 600px;
+        height: 500px;
         margin: auto;
         padding-top: 50px;
       }
@@ -112,12 +112,12 @@
         camera.position.z = 1000;
 
         scene = new THREE.Scene();
-        // scene.background = new THREE.Color();
+        scene.background = new THREE.Color();
         scene.fog = new THREE.FogExp2(0x000000, 0.0007);
 
         geometry = new THREE.Geometry();
 
-        for (i = 0; i < 500; i++) {
+        for (i = 0; i < 2000; i++) {
 
           var vertex = new THREE.Vector3();
           vertex.x = Math.random() * 2000 - 1000;
@@ -133,7 +133,7 @@
             [0.95, 1, 0.3], 400
           ],
           [
-            [0.90, 1, 0.4], 30
+            [0.90, 1, 0.4], 300
           ],
           [
             [0.85, 1, 0.3], 20
@@ -164,8 +164,8 @@
 
         renderer = new THREE.WebGLRenderer();
         renderer.setPixelRatio(window.devicePixelRatio);
-        // renderer.setSize(anchor.offsetWidth, anchor.offsetHeight);
-        renderer.setSize(600, 700);
+        renderer.setSize(anchor.offsetWidth, anchor.offsetHeight);
+        // renderer.setSize(600, 500);
         container.appendChild(renderer.domElement);
 
         anchor.addEventListener('mousemove', onDocumentMouseMove, false);
